@@ -1,0 +1,91 @@
+.tw-about{
+    width: 100%;
+    background:#f9f6f3;
+    .main-title{
+        font-size: 20px;
+        text-align: left;
+        font-weight: 600;
+        margin-bottom: 20px; 
+    }
+    .tw-about-wrapper{
+        max-width: 800px;
+        margin: 0px auto;
+        padding: 20px;
+        .tw-about-section{
+            margin-bottom: 30px;
+        }
+    }
+    
+    .tw-about-contact{
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        .about-block-wrapper{
+            padding: 22px 18px;
+        }
+        .about-block{
+            width: calc(100%/3 - 10px);
+            text-align: center;
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0,0.05), 0 4px 5px rgba(0, 0, 0,0.05);
+            .title{
+                font-size: 16px;
+                font-weight: 600;
+                color: #242124;
+            }
+        }
+        .btn-tw-about{
+            background: #376559;
+            font-weight: 600;
+            font-size: 16px;
+            border-radius: 4px;
+            display: inline-block;
+            color: #fff;
+            width: 100%;
+            text-decoration: none;
+            text-align: center;
+            padding: 10px 0px;
+            transition: all 0.3s ease;
+            &:hover{
+                opacity: 0.9;
+            }
+        }
+    }
+    .tw-relate-product{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        .product-block{
+            width: calc(100%/3 - 10px);
+            background:#fff;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(0, 0, 0,0.05), 0 4px 5px rgba(0, 0, 0,0.05);
+            img{
+                width: 100%;
+            }
+            .content{
+                padding: 15px;
+                .title{
+                    font-size: 16px;
+                    color: #242124;
+                }
+                .twdes{
+                    padding: 4px 0px;
+                    font-size: 13px;
+                    color: #62646a;
+                }
+            }
+        }
+    }
+    a{
+        text-decoration: none;
+    }
+}
+
+@media (max-width:575px){
+    .tw-about .tw-about-contact .about-block,.tw-about .tw-relate-product .product-block{
+        width: 100%;
+    }
+}

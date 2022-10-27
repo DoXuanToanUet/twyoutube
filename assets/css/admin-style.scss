@@ -1,0 +1,127 @@
+@import "../css/about";
+.twfaq { 
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 10px;
+    // margin: 150px 5% 5% 5%;
+    // min-width: 320px;
+    // max-width: 320px;
+}
+.twfaq__logo__image {
+    margin-left: -13px;
+    margin-bottom: 13px;
+}
+
+.twfaq__heading { 
+    color: var(--blue-dark);
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-align: center; 
+}
+
+.twfaq__detail {
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    margin: 20px 0 0 0;
+    padding: 5px 0 20px 0;
+}
+
+.twfaq__summary:hover,
+.twfaq__summary:active { 
+    // color: ;
+    cursor: pointer; 
+}
+
+.twfaq__detail[open] > .twfaq__summary { 
+    font-weight: 700; 
+}
+
+.twfaq__summary {
+    list-style: none;
+  }
+
+.twfaq__summary::-webkit-details-marker {
+    display: none;
+  }
+
+.twfaq__summary { 
+    display: block;
+    padding: 0;
+    position: relative;
+}
+
+    
+.twfaq__summary:after {
+    display: inline-block;
+    content:'+';
+    background-repeat: no-repeat;
+    background-position: right center;
+    text-align: right;
+    // padding-bottom: 20px;
+  }
+  
+details[open] .twfaq__summary:after {
+    display: inline-block;
+    width: 18px;
+    height: 10px;
+    content: "-";
+    // background-image: url("https://bobmatyas.github.io/fm-twfaq-accordion/images/icon-arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+    // transform:scaleY(-1);
+}
+
+.twyt-show{
+    background:#f9f6f3;
+    padding: 20px;
+    .twyt-show-wrapper{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        max-width: 1000px;
+        margin: 0px auto;
+    }
+    &-title{
+        max-width: 1000px;
+        margin: 0px auto;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .twyt-show-item{
+        background: #fff;
+        box-shadow: 0 1px 2px rgba(0, 0, 0,0.05), 0 4px 5px rgba(0, 0, 0,0.05);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        // justify-content: center;
+        border: 1px solid #eee;
+        border-radius: 6px;
+        padding: 20px 10px;
+        &__title{
+            font-weight: 600;
+            font-size: 14px;
+            padding: 10px 0px 0px;
+        }
+        &__short{
+            padding: 4px 10px;
+            border: 2px dashed;
+            word-break: break-all;
+        }
+        p{
+            margin: 0px 0px 8px;
+        }
+        img{
+            max-width: 350px;
+            width: 100%;
+            border: 1px solid #e2e2e2;
+            margin: 0px auto;
+        }
+    }
+   
+}
+@media (max-width:575px){
+    .twyt-show .twyt-show-wrapper{
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}

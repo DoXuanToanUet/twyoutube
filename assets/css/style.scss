@@ -1,0 +1,282 @@
+$twyt_color : #141B38;
+.flex{
+    display: flex;
+}
+.d-flex-col{
+    flex-direction: column;
+}
+.d-flex-center{
+    justify-content: center;
+    align-items: center;
+}
+.d-gap{
+    gap: 15px;
+}
+.d-gap-small{
+    gap: 5px;
+}
+.d-flex-wrap{
+    flex-wrap: wrap;
+}
+.d-align-middle{
+    align-items: center;
+}
+.d-align-spacebt{
+    justify-content: space-between;
+}
+.d-align-center{
+    justify-content: center;
+}
+.text-center{
+    text-align: center;
+}
+.twyt-avatar{
+    img{
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+    }
+}
+.twyt-name {
+    color: $twyt_color;
+    font-size: 20px;
+}
+.twyt-subtitle{
+    color: #8c8c8c;
+}
+.twyt-sub{
+    background: #c00;
+    padding: 4px 12px;
+    color: #fff;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    &:hover{
+        color: #fff;
+        opacity: 0.9;
+    }
+}
+.twyt-header-wrapper {
+    z-index: 2;
+}
+.youtube-wrapper{
+    padding: 30px 0px;
+    .youtube-item{
+        width: calc(100%/3 - 10px);
+    }
+}
+.twyt-wrapper,.twyt-playlist-wrapper,.twyt-search-wrapper{
+    margin: 30px 0px;
+    &.tw_col_3{
+        .youtube-item{
+            width: calc(100%/3 - 10px);
+        }
+    }
+    &.tw_col_4{
+        gap: 10px;
+        .youtube-item{
+            width: calc(100%/4 - (1 - 1/4)*10px);
+        }
+    }
+    &.tw_col_2{
+        .youtube-item{
+            width: calc(100%/2 - 15px);
+        }
+    }
+}
+.youtube-item-thumb{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    aspect-ratio: 16/9;
+    &::before{
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        height: 80px;
+        background: linear-gradient(to top,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%);
+        z-index: 1;
+    }
+}
+.youtube-item-thumb{
+    img{
+        transition: all 0.3s ease;
+        width: 100%;
+        object-fit: contain;
+    }
+    // svg{
+    //     display: block;
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%,-50%);
+    //     z-index: 99;
+    //     // animation: twytpulse 2s infinite;
+    //     border-radius: 50%;
+    // }
+}
+.youtube-item:hover{
+    .youtube-item-thumb{
+        img{
+            transform: scale(1.08);
+        }   
+    }
+}
+.twyt-duration{
+    position: absolute;
+    bottom: 10px;
+    z-index: 2;
+    right: 10px;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 4px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+.youtube-item{
+    .twyt-title{
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        overflow: hidden;
+        font-size: 18px;
+        margin: 10px 5px;
+        color: #141B38;
+    }
+ 
+}
+// @keyframes twytpulse{
+//     0% {
+//         transform: scale(0.9);
+//         box-shadow: 0 0 0 0 rgba(255,0,0,0.3), 0 0 0 1px rgba(255,0,0,0.3), 0 0 0 3px rgba(255,0,0,0.3), 0 0 0 5px rgba(255,0,0,0.3);
+//     }
+//     70% {
+//         transform: scale(1);
+//     }
+//     100% {
+//         transform: scale(0.9);
+//         box-shadow: 0 0 0 0 rgba(255,0,0,0.3), 0 0 0 0 rgba(255,0,0,0.3), 0 0 0 20px rgba(255,0,0,0), 0 0 0 30px rgba(255,0,0,0);
+//     }
+// }
+.twyt-bar{
+    color: #434960;
+    font-size: 14px;
+    svg{
+        width: 15px;
+        height: 15px;
+    }
+}
+.twyt-header {
+    position: relative;
+    overflow:hidden;
+    height:250px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    &.twmb_header_1{
+        flex-direction: column;
+        height: unset;
+        justify-content: unset;
+        align-items: unset;
+        .twyt-avatar{
+            top: -50px;
+            position: relative;
+            img{
+                border-radius: 10px;
+                border: 6px solid rgb(255, 255, 255);
+            }
+        }
+        .twyt-header-desc{
+            margin-top: -50px;
+            .twyt-content{
+                color: #62646a;
+                white-space: pre-wrap;
+                padding: 10px 0px;
+            }
+        }
+
+      
+    }
+}
+.twyt-header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    -webkit-filter: blur(100px); 
+    filter: blur(100px);
+    opacity:0.3;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.twyt-header.twyt-header-shortcode:before{
+    background-image:none;
+}
+.twyt-story-wrapper{
+    position: relative;
+}
+.twyt-story-btn {
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    top: 50%;
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 2;
+    cursor: pointer;
+    svg{
+        width: 20px;
+        height: 20px;
+    }
+}
+.twyt-story-swiper__next{
+    right: -20px;
+}
+.twyt-story-swiper__prev{
+    left: -20px;
+}
+@media (max-width:575px){
+    .twyt-wrapper,.twyt-playlist-wrapper,.twyt-search-wrapper {
+        &.twmb_col_2{
+            .youtube-item{
+                width: calc(50% - (1 - 1/2)*15px);
+                .twyt-bar{
+                    font-size: 13px;
+                    gap: 5px;
+                }
+                .twyt-duration{
+                    font-size: 13px;
+                }
+            }
+        }
+        &.twmb_col_1{
+            .youtube-item{
+                width: calc(100%);
+            }
+        }
+       
+    }
+    .twyt-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+   
+}
